@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uexplugins>
+    <plugin
+        uexName="uexButton" version="3.0.4" build="4">
+        <info>4:修复uexButton动态库在低版本手机上无法调用的问题</info>
+        <build>3:修复可以创建同一id按钮的BUG</build>
+        <build>2:添加设置字体大小，点击的回调方法改为onClick</build>
+        <build>0:系统按钮插件</build>
+    </plugin>
+</uexplugins>
