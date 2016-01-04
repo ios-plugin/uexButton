@@ -8,23 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3C1BF47619E8C878006AF7B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1BF47519E8C878006AF7B4 /* Foundation.framework */; };
-		3C1BF47B19E8C878006AF7B4 /* EUExButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C1BF47A19E8C878006AF7B4 /* EUExButton.h */; };
 		3C1BF47D19E8C878006AF7B4 /* EUExButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BF47C19E8C878006AF7B4 /* EUExButton.m */; };
 		3C1BF4AC19E8CEA9006AF7B4 /* ACButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BF4AB19E8CEA9006AF7B4 /* ACButton.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3C1BF47019E8C878006AF7B4 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				3C1BF47B19E8C878006AF7B4 /* EUExButton.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C1BF47219E8C878006AF7B4 /* libuexButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexButton.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,7 +136,6 @@
 			buildPhases = (
 				3C1BF46E19E8C878006AF7B4 /* Sources */,
 				3C1BF46F19E8C878006AF7B4 /* Frameworks */,
-				3C1BF47019E8C878006AF7B4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
