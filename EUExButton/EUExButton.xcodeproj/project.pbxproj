@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214053AD1D1A812A0003A759 /* AppCanKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214053AC1D1A812A0003A759 /* AppCanKit.framework */; };
 		3C1BF47619E8C878006AF7B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1BF47519E8C878006AF7B4 /* Foundation.framework */; };
 		3C1BF47D19E8C878006AF7B4 /* EUExButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BF47C19E8C878006AF7B4 /* EUExButton.m */; };
 		3C1BF4AC19E8CEA9006AF7B4 /* ACButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1BF4AB19E8CEA9006AF7B4 /* ACButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		214053AC1D1A812A0003A759 /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
 		3C1BF47219E8C878006AF7B4 /* libuexButton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexButton.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1BF47519E8C878006AF7B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C1BF47919E8C878006AF7B4 /* EUExButton-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EUExButton-Prefix.pch"; sourceTree = "<group>"; };
 		3C1BF47A19E8C878006AF7B4 /* EUExButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExButton.h; sourceTree = "<group>"; };
 		3C1BF47C19E8C878006AF7B4 /* EUExButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUExButton.m; sourceTree = "<group>"; };
-		3C1BF49C19E8C92E006AF7B4 /* EUExBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBase.h; sourceTree = "<group>"; };
 		3C1BF49D19E8C92E006AF7B4 /* EUExBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUExBaseDefine.h; sourceTree = "<group>"; };
 		3C1BF49E19E8C92E006AF7B4 /* EUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUtility.h; sourceTree = "<group>"; };
 		3C1BF4A119E8CAC9006AF7B4 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214053AD1D1A812A0003A759 /* AppCanKit.framework in Frameworks */,
 				3C1BF47619E8C878006AF7B4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,7 +96,6 @@
 		3C1BF49B19E8C92E006AF7B4 /* engineHeader */ = {
 			isa = PBXGroup;
 			children = (
-				3C1BF49C19E8C92E006AF7B4 /* EUExBase.h */,
 				3C1BF49D19E8C92E006AF7B4 /* EUExBaseDefine.h */,
 				3C1BF49E19E8C92E006AF7B4 /* EUtility.h */,
 			);
@@ -104,6 +105,7 @@
 		3C1BF49F19E8C92E006AF7B4 /* sourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				214053AC1D1A812A0003A759 /* AppCanKit.framework */,
 				3C1BF4A019E8CAC9006AF7B4 /* JSON */,
 				3C1BF4AA19E8CEA9006AF7B4 /* ACButton.h */,
 				3C1BF4AB19E8CEA9006AF7B4 /* ACButton.m */,
@@ -258,6 +260,10 @@
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexButton/";
 				DSTROOT = /tmp/EUExButton.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExButton/sourceCode",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EUExButton/EUExButton-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -271,6 +277,10 @@
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/uexButton/";
 				DSTROOT = /tmp/EUExButton.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExButton/sourceCode",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EUExButton/EUExButton-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";

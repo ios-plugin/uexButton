@@ -15,20 +15,25 @@
 
 @interface EUExButton()
 
-@property (nonatomic,retain) NSMutableDictionary * btnDic;
+@property (nonatomic,strong) NSMutableDictionary * btnDic;
 
 @end
 
 @implementation EUExButton
 
 
-- (id)initWithBrwView:(EBrowserView *)eInBrwView {
-    if (self = [super initWithBrwView:eInBrwView]) {
-        self.btnDic = [NSMutableDictionary dictionary];
+//- (id)initWithBrwView:(EBrowserView *)eInBrwView {
+//    if (self = [super initWithBrwView:eInBrwView]) {
+//        self.btnDic = [NSMutableDictionary dictionary];
+//    }
+//    return self;
+//}
+- (id)initWithWebViewEngine:(id<AppCanWebViewEngineObject>)engine{
+    if (self = [super initWithWebViewEngine:engine]) {
+          self.btnDic = [NSMutableDictionary dictionary];
     }
     return self;
 }
-
 -(void)dealloc {
     [super dealloc];
 }
@@ -80,7 +85,8 @@
     }
     //
     
-    [EUtility brwView:meBrwView addSubview:btn];
+   // [EUtility brwView:meBrwView addSubview:btn];
+    [[self.webViewEngine webView] addSubview:btn];
     [btn.superview bringSubviewToFront:btn];
     btn.idStr = idStr;
     [self.btnDic setObject:btn forKey:idStr];
@@ -90,8 +96,9 @@
 
 -(void)tap:(id)sender{
     ACButton * btn = (ACButton *)sender;
-    NSString *jsString = [NSString stringWithFormat:@"uexButton.onClick('%@');",btn.idStr];
-    [self.meBrwView stringByEvaluatingJavaScriptFromString:jsString];
+   // NSString *jsString = [NSString stringWithFormat:@"uexButton.onClick('%@');",btn.idStr];
+    //[self.meBrwView stringByEvaluatingJavaScriptFromString:jsString];
+    [self.webViewEngine callbackWithFunctionKeyPath:@"uexButton.onClick" arguments:ACArgsPack(btn.idStr)];
 }
 
 -(void)close:(NSMutableArray *)inArguments{
