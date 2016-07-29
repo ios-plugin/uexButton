@@ -21,7 +21,7 @@
 
 -(void)dealloc{
     self.idStr = nil;
-    [super dealloc];
+   
 }
 
 /*
